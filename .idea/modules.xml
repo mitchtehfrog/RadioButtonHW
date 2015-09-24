@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SquareCircle.iml" filepath="$PROJECT_DIR$/SquareCircle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadioButtonHW.iml" filepath="$PROJECT_DIR$/RadioButtonHW.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
