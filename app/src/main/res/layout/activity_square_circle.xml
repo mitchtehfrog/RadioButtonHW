@@ -10,24 +10,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
         android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:entries="@array/spinner_values"/>
+
+<RadioGroup android:id= "@+id/radio_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_above="@+id/spinner"
+    android:layout_alignParentStart="true">
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Square"
-        android:id="@+id/radioButton"
+        android:id="@+id/radio_square"
         android:layout_above="@+id/spinner"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="87dp" />
+        android:layout_marginBottom="87dp"
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Circle"
-        android:id="@+id/radioButton2"
-        android:layout_alignBottom="@+id/radioButton"
-        android:layout_toEndOf="@+id/radioButton" />
+        android:id="@+id/radio_circle"
+        android:layout_alignBottom="@+id/radio_square"
+        android:layout_toEndOf="@+id/radio_square"
+        android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
 
     <com.example.elon.squarecircle.ShapeView
         android:id="@+id/shapeview"

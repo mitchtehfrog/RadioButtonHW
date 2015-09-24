@@ -6,18 +6,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 
 public class SquareCircleActivity extends Activity {
 
     private ShapeView shapeView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_square_circle);
-
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
         shapeView = (ShapeView) findViewById(R.id.shapeview);
+        shapeView.setSpinnerValue(spinner);
     }
 
     @Override
@@ -36,6 +41,20 @@ public class SquareCircleActivity extends Activity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onRadioButtonClicked(View view){
+        RadioGroup radioGroup =  (RadioGroup) findViewById(R.id.radio_group);
+        int id = radioGroup.getCheckedRadioButtonId();
+
+        switch (id){
+            case R.id.radio_circle:
+                shapeView.setDrawCircle(true);
+                break;
+            case R.id.radio_square:
+                shapeView.setDrawCircle(false);
+                break;
+        }
     }
 
 

@@ -12,8 +12,6 @@ public class Square {
     private Paint paint;
 
 
-    //I screwed up and made alpha instead of width, but didn't want to change the wording. therefore,
-    //paint.setARGB uses 255 as alpha value but the "alpha" is treated as width.
     public Square(float x, float y, int red, int green, int blue){
         this.x = x;
         this.y = y;
@@ -25,7 +23,7 @@ public class Square {
     }
 
     public void draw(Canvas canvas){
-        canvas.drawRect(50,50,50,50, paint);
+        canvas.drawRect(x,y,x+100,y+100, paint);
     }
 
 
